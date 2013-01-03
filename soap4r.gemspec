@@ -1,18 +1,14 @@
 require 'rubygems'
 require File.join(File.dirname(__FILE__), 'lib', 'soap', 'version')
 
-PKG_NAME      = 'rubyjedi-soap4r'
-PKG_BUILD     = ENV['PKG_BUILD'] ? ".#{ENV['PKG_BUILD']}" : ".#{Time.now.strftime('%Y%m%d%H%M%S')}"
-PKG_VERSION   = SOAP::VERSION::STRING + PKG_BUILD
-
-SPEC = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
-  s.name = PKG_NAME
+  s.name = 'soap4r'
   s.summary = "An updated implementation of SOAP 1.1 for Ruby 1.8 and 1.9."
-  s.version = PKG_VERSION
+  s.version = SOAP::VERSION::STRING
 
-  s.author = "Laurence A. Lee, Hiroshi NAKAMURA"
-  s.email = "rubyjedi@gmail.com, nahi@ruby-lang.org"
+  s.author = "Laurence A. Lee, Hiroshi NAKAMURA, Fabio Kung, yuhong.wu"
+  s.email = "rubyjedi@gmail.com, nahi@ruby-lang.org, fabio.kung@gmail.com"
   s.homepage = "http://wiki.github.com/rubyjedi/soap4r"
 
   s.add_dependency("httpclient", "~> 2.1.5.2")

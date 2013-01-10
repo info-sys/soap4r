@@ -27,7 +27,7 @@ class XMLParser < XSD::XMLParser::Parser
 
   def do_parse(string_or_readable)
     # XMLParser passes a String in utf-8.
-    @charset = 'utf-8'
+    @charset = 'UTF-8'
     @parser = Listener.new
     @parser.parse(string_or_readable) do |type, name, data|
       case type

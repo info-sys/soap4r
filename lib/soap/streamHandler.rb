@@ -56,7 +56,7 @@ class StreamHandler
     end
     charset = $1
     charset.gsub!(/"/, '') if charset
-    charset || 'us-ascii'
+    charset.upcase || 'us-ascii'
   end
 
   def self.create_media_type(charset)
